@@ -79,6 +79,15 @@ header {
   padding: 30px 20px;
 }
 
+@media (max-width: 500px) {
+  header {
+    padding-bottom: 0px;
+    padding-top: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
 .navbar {
 	max-width: 1200px;
 	height: 50px;
@@ -95,6 +104,12 @@ header {
   }
 }
 
+@media (max-width: 500px) {
+  .navbar {
+    height: 422px;
+  }
+}
+
 header nav {
 	width: 75%;
 	display: flex;
@@ -107,10 +122,34 @@ header nav {
   }
 }
 
+@media (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
+}
+
 header nav a {
 	font-size: 20px;
 	color: gray;
 	text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  header nav a {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+  }
+  header nav a:first-child {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+  }
 }
 
 header nav a:hover {
@@ -133,6 +172,13 @@ header img {
   .hero {
     height: 400px;
     margin-top: 160px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    height: 400px;
+    margin-top: 437px;
   }
 }
 
@@ -211,19 +257,26 @@ button:hover {
 }
 
 .twocolumns {
+  width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
+@media (max-width: 500px) {
+  .twocolumns {
+    flex-direction: column;
+  }
+}
+
 .features {
-	width: 600px;
+	max-width: 600px;
 	font-size: 16px;
 	padding: 20px 10px 20px 0;
 }
 
 .about {
-	width: 600px;
+	max-width: 600px;
 	font-size: 16px;
 	padding: 20px 0;
 }
@@ -238,22 +291,28 @@ button:hover {
 	justify-content: space-between;
 }
 
+@media (max-width: 500px) {
+  .threecolumns {
+    flex-direction: column;
+  }
+}
+
 .services {
-	width: 400px;
+	max-width: 400px;
 	font-size: 16px;
 	padding: 20px 0;
 	margin-right: 10px;
 }
 
 .product {
-	width: 400px;
+	max-width: 400px;
 	font-size: 16px;
 	padding: 20px 0;
 	margin-right: 10px;
 }
 
 .vision {
-	width: 400px;
+	max-width: 400px;
 	font-size: 16px;
 	padding: 20px 0;
 	margin-right: 10px;
