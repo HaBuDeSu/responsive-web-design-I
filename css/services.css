@@ -162,22 +162,19 @@ header img {
 
 .hero {
 		width: 100%;
-		height: 600px;
-		margin-top: 60px;
-		font-size: 0;
+		margin-top: 110px;
 		display: flex;
+		flex-direction: column;
 }
 
 @media (max-width: 800px) {
   .hero {
-    height: 400px;
     margin-top: 160px;
   }
 }
 
 @media (max-width: 500px) {
   .hero {
-    height: 400px;
     margin-top: 437px;
   }
 }
@@ -186,91 +183,20 @@ header img {
 	width: 100%;
 }
 
-.hero-left {
-		width: 600px;
-		height: 600px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-    align-items: center;
-}
-
-@media (max-width: 800px) {
-  .hero-left {
-    width: 100%;
-    height: 400px;
-  }
-}
-
-@keyframes blues {
-	0% {color: #000000;}
-	25% {color: #ccccff;}
-	50% {color: red;}
-	75% {color: #ccccff;}
-	100% {color: #000000;}
-}
-
-h1 {
-	font-size: 80px;
-	text-align: center;
-	animation-name: blues;
-	animation-duration: 5s;
-	animation-iteration-count: infinite;
-}
-
-button {
-	width: 160px;
-	height: 30px;
-	font-size: 16px;
-	background: white;
-	border-color: black;
-}
-
-button:hover {
-	background: #ccccff;
-}
-
-.hero-right {
-		width: 600px;
-		height: 600px;
-    display: flex;
-    align-items: center;
-}
-
-@media (max-width: 800px) {
-  .hero-right {
-    display: none;
-  }
-}
-
-@keyframes pulse {
-	0% {width: 100%;}
-	50% {width: 80%; padding-left: 28%; padding-top: 20%;}
-	100% {width: 100%;}
-}
-
-.hero-right img {
-	width: 100%;
-	padding: 10%;
-}
-
-.hero-right img:hover {
-	animation-name: pulse;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-}
-
-.twocolumns {
-  width: 100%;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
 @media (max-width: 500px) {
-  .twocolumns {
-    flex-direction: column;
-  }
+	.hero img {
+		display: none;
+	}
+}
+
+h2 {
+	margin-top: 20px;
+	font-size: 40px;
+}
+
+.hero p {
+	margin-bottom: 20px;
+	font-size: 22px;
 }
 
 .services {
@@ -279,19 +205,19 @@ button:hover {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	height: 1200px;
+	min-height: 1200px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
 	.services {
 		flex-direction: column;
-		height: 2400px;
+		align-content: center;
 	}
 }
 
 .servicebox {
-	width: 575px;
-	height: 350px;
+	width: 48%;
+	min-height: 350px;
 	font-size: 22px;
 	border-style: solid;
 	border-width: 2px;
@@ -300,71 +226,87 @@ button:hover {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	align-items: center;
 	padding: 15px;
+	margin-bottom: 20px;
 }
 
-.features {
-	max-width: 600px;
+@media (max-width:800px) {
+	.servicebox {
+		width: 80%;
+	}
+}
+button {
+	max-width: 160px;
+	height: 30px;
 	font-size: 16px;
-	padding: 20px 10px 20px 0;
+	background: white;
+	border-color: black;
 }
 
-.about {
-	max-width: 600px;
+.servicebox button {
+	width: 200px;
+	height: 50px;
 	font-size: 16px;
-	padding: 20px 0;
+	background: white;
+	border-color: black;
+	border-radius: 5px;
 }
 
-.middle-img {
-	width: 100%;
+button:hover {
+	background: #ccccff;
 }
 
-.threecolumns {
+.bottom {
 	display: flex;
-	flex-direction: row;
+	width: 100%;
+	min-height: 400px;
 	justify-content: space-between;
 }
 
-@media (max-width: 500px) {
-  .threecolumns {
-    flex-direction: column;
-  }
+.bottom-left {
+	width: 50%;
+	min-height: 400px;
+	font-size: 22px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 
-.services {
-	max-width: 400px;
-	font-size: 16px;
-	padding: 20px 0;
-	margin-right: 10px;
+@media (max-width: 800px) {
+	.bottom-left {
+		width: 100%;
+	}
 }
 
-.product {
-	max-width: 400px;
-	font-size: 16px;
-	padding: 20px 0;
-	margin-right: 10px;
+ul {
+	list-style-type: disc;
+	list-style-position: inside;
+	margin-left: 0;
 }
 
-.vision {
-	max-width: 400px;
-	font-size: 16px;
-	padding: 20px 0;
-	margin-right: 10px;
+li {
+	margin-bottom: 15px;
 }
 
-.contact {
-	font-size: 16px;
-	margin-top: 40px;
+.bottom-right {
+	width: 50%;
 }
 
-.contact p {
-	margin-bottom: 10px;
+@media (max-width:800px) {
+	.bottom-right {
+		display: none;
+	}
+}
+
+.bottom img {
+	width: 100%;
 }
 
 footer {
-	font-size: 16px;
+	font-size: 22px;
 	text-align: center;
-	margin-top: 60px;
-	margin-bottom: 100px;
+	margin-top: 100px;
+	margin-bottom: 20px;
 	font-family: Srisakdi, cursive;
 }
